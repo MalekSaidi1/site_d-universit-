@@ -1,0 +1,282 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header .logo img {
+    max-width: 130px;
+    margin: 10px 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00b4d8;
+}
+
+/* Section d'introduction */
+.intro {
+    position: relative;
+    height: 100vh;
+    background: url('imageaccueil.png') no-repeat center center/cover;
+}
+
+.intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Overlay pour contraste */
+    z-index: 1;
+}
+
+.intro .overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.intro .btn {
+    background-color: #00b4d8;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.intro .btn:hover {
+    background-color: #007BFF;
+}
+
+/* Liens exploratoires */
+.links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.link-box {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 30%;
+    height: 250px;
+    min-width: 250px;
+}
+.link-box:hover {
+    transform: scale(1.1);
+}
+.link-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #0056a3;
+}
+
+.link-box p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.link-box .btn {
+    background-color: #0056a3;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.link-box .btn:hover {
+    background-color: #003d73;
+}
+/*formulaire de contact*/
+#contact-section {
+    background-color: #f4f4f9a2;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color:#0056a3; /* Couleur violet */
+}
+
+#contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 1em;
+    color: #333;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color:#0056a3;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #0056a3;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #003d73;
+}
+/* Section des partenaires */
+.partenaires {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.partenaires h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.partenaires .logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.partenaires .logos img {
+    max-width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.partenaires .logos img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: #0056a3;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #00b4d8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;}
