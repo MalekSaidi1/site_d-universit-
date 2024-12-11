@@ -1,0 +1,237 @@
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header .logo img {
+    max-width: 130px;
+    margin: 10px 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00b4d8;
+}
+
+
+/* Section clubs */
+.clubs {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.clubs h1 {
+    font-size: 2.5rem;
+    color: #0056a3;
+    margin-bottom: 10px;
+}
+
+.clubs p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Club individuel */
+.club {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*.club img {
+    width: 200px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}*/
+
+.club-content {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.club-content h2 {
+    font-size: 1.5rem;
+    color: #0056a3;
+    margin-bottom: 10px;
+}
+
+.club-content p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.club-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #0056a3;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.club-content .btn:hover {
+    background-color: #003d73;
+}
+/*slides*/
+.club .slider {
+    position: relative;
+    width: 400px; /* Largeur définie du conteneur */
+    height: 400px; /* Hauteur définie du conteneur */
+   /* overflow: hidden;*/
+    /*border-radius: 5px;*/
+    margin-right: 20px; /* Assure l'espacement avec le contenu à droite */
+    flex-shrink: 0; /* Garde la taille constante */
+}
+.club .slider img {
+    position: absolute;
+    width: 100%; /* Les images remplissent le conteneur */
+    height: 100%; /* S'ajustent à la hauteur du conteneur */
+    /*object-fit: cover; *//* S'assurent que l'image est bien cadrée */
+    border-radius: 5px;
+    margin: 0; /* Retirez toutes les marges inutiles */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: flex-start;
+}
+
+.club .slider img.active {
+    opacity: 1;
+}
+
+/* Footer global */
+footer {
+    background-color:  #024b8b;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+}
+
+/* Conteneur principal */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section principale */
+.footer-main h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #00b4d8;
+}
+
+.footer-main p {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Liens rapides */
+.footer-links h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #00b4d8;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #00b4d8;
+}
+
+/* Réseaux sociaux */
+.footer-social h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #00b4d8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+/* Bas de page */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom a {
+    color: #00b4d8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
