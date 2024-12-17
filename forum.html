@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forum avec Nouveau Sujet</title>
+    <link rel="stylesheet" href="forum.css" />
+  </head>
+  <body>
+    <div class="forum-container">
+      <!-- Section des sujets -->
+      <div class="topics">
+        <h2>Liste des Sujets</h2>
+        <button id="new-topic-button">+ Nouveau Sujet</button>
+        <div class="topic-item" data-id="1">Sujet 1</div>
+        <div class="topic-item" data-id="2">Sujet 2</div>
+        <div class="topic-item" data-id="3">Sujet 3</div>
+      </div>
+
+      <!-- Section centrale -->
+      <div class="discussion">
+        <h2 id="discussion-title">Créer un Nouveau Sujet</h2>
+        <div class="discussion-content" id="discussion-content">
+          Aucune discussion sélectionnée. Cliquez sur un sujet pour voir la
+          discussion ou ajoutez un nouveau sujet.
+        </div>
+
+        <!-- Formulaire pour ajouter une réponse ou un nouveau sujet -->
+        <div class="form-section">
+          <div class="input-container">
+            <textarea
+              id="input-text"
+              placeholder="Écrivez votre message ici..."
+            ></textarea>
+            <button id="submit-button" class="submit-btn">&#8593;</button>
+            <!-- Flèche vers le bas -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="forum.js"></script>
+  </body>
+</html>

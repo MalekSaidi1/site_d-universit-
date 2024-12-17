@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="logo essect.png" type="image/png" />
+
+    <title>Plan d'Étude</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f1f1f1;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        color: #333;
+      }
+      header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+
+        display: flex; /* Active Flexbox */
+        align-items: center; /* Aligne verticalement les éléments */
+        justify-content: space-between; /* Espace entre le logo et la navigation */
+        padding: 10px 50px; /* Ajoute de l'espace autour */
+      }
+
+      header .logo img {
+        max-width: 130px;
+        height: auto;
+        margin-right: 20px; /* Ajoute un espace entre le logo et les liens */
+      }
+      header nav {
+        flex-grow: 1; /* Permet à la navigation de prendre tout l'espace nécessaire */
+      }
+
+      header nav ul {
+        list-style: none;
+        display: flex; /* Alignement horizontal des éléments */
+        margin: 0;
+        padding: 0;
+        justify-content: center; /* Centre les éléments horizontalement */
+      }
+
+      header nav ul li {
+        margin: 0 15px; /* Espace entre les éléments */
+      }
+
+      header nav ul li a {
+        color: rgba(0, 0, 255, 0.767);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+      }
+
+      header nav ul li a:hover {
+        color: #007bff;
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: #333;
+        text-align: center; /* Centre horizontalement */
+        margin-top: 150px; /* Laisse un espace entre la navigation et le titre */
+        margin-bottom: 20px; /* Ajoute un espacement avec le contenu suivant */
+        font-family: "Georgia", serif; /* Nouvelle police pour le titre */
+      }
+
+      p.description {
+        font-family: Verdana, sans-serif; /* Police rugueuse */
+        font-size: 1rem;
+        color: #555;
+        text-align: left;
+        margin: 20px auto; /* Ajoute un espace en haut et centre horizontalement */
+        max-width: 500px; /* Garde une largeur raisonnable */
+        padding-top: 30px; /* Laisse un espace pour éviter le chevauchement avec la nav */
+      }
+
+      .study-guide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin-top: 20px;
+        margin-bottom: 80px; /* Ajoute un espace entre les guides links et le footer */
+      }
+
+      .guide-link {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        background-color: #0056a3; /* rouge clair */
+        padding: 15px;
+        width: 500px;
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .guide-link:hover {
+        background-color: #0056a3; /* rouge plus clair */
+        color: #fff;
+      }
+
+      .guide-link:hover .circle {
+        background-color: #ff6347; /* #007bff;  bleu */
+      }
+
+      .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid #000;
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
+      }
+
+      .circle span {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .study-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      footer {
+    background-color:  #024b8b;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+}
+
+/* Conteneur principal */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section principale */
+.footer-main h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #00b4d8;
+}
+
+.footer-main p {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Liens rapides */
+.footer-links h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #00b4d8;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #00b4d8;
+}
+
+/* Réseaux sociaux */
+.footer-social h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #00b4d8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+/* Bas de page */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom a {
+    color: #00b4d8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="logo essect.png" alt="Logo ESSECT" />
+      </div>
+      <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="etude2.html">Programmes</a></li>
+            <li><a href="events.html">Événements</a></li>
+            <li><a href="forum.html">Forums</a></li>
+            <li><a href="club.html">Clubs</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>Plan d'Étude</h1>
+    <p class="description">
+      Les formations en licence et en master sont conçues pour répondre aux
+      besoins des étudiants à chaque étape de leur parcours académique. Les
+      licences posent les bases nécessaires à une carrière ou à des études plus
+      poussées, tandis que les masters permettent d'approfondir et de se
+      spécialiser dans un domaine précis.
+    </p>
+    <div class="study-container">
+      <div class="study-guide">
+        <a href="etude.html" class="guide-link">
+          <div class="circle"><span>+</span></div>
+          Guide des études en Licence
+        </a>
+        <a href="#" class="guide-link">
+          <div class="circle"><span>+</span></div>
+          Guide des études en Master
+        </a>
+      </div>
+    </div>
+
+<footer>
+    <div class="footer-container">
+        <!-- Section principale -->
+        <div class="footer-main">
+            <h3>ESSECT</h3>
+            <p>Faculté des Sciences Économiques et de Gestion de Tunis. Suivez-nous pour rester informé des événements, programmes et actualités.</p>
+            <p>Adresse : Montfleury, Tunis, Tunisie</p>
+            <p>Téléphone : +216 71 123 456 </p>
+        
+        </div>
+
+        <!-- Section des liens rapides -->
+        <div class="footer-links">
+            <h4>Liens rapides</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programmes.html">Programmes</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="forums.html">Forums</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Section des réseaux sociaux -->
+        <div class="footer-social">
+            <h4>Suivez-nous</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/essect" target="_blank">
+                    <img src="facebook-icon.jpg" alt="Facebook">
+                </a>
+                <a href="mailto:contact@essect.tn">
+                    <img src="email-icon.jpg" alt="">
+                </a>
+                <a href="https://www.linkedin.com/company/essect-montfleury/" target="_blank">
+                    <img src="linkedin-icon.bc4172bd-63f0-455a-9acd-5457f44e4473" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 ESSECT. Tous droits réservés. | <a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
+</footer>
+  </body>
+</html>

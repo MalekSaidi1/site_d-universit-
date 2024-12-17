@@ -37,26 +37,26 @@ header nav ul li a:hover {
 
 
 /* Section clubs */
-.clubs {
+.events {
     padding: 40px 20px;
     background-color: #f9f9f9;
     text-align: center;
 }
 
-.clubs h1 {
+.events h1 {
     font-size: 2.5rem;
     color: #0056a3;
     margin-bottom: 10px;
 }
 
-.clubs p {
+.events p {
     font-size: 1.2rem;
     color: #555;
     margin-bottom: 40px;
 }
 
 /* Club individuel */
-.club {
+.event {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -80,24 +80,24 @@ header nav ul li a:hover {
     margin-right: 20px;
 }*/
 
-.club-content {
+.event-content {
     text-align: left;
     margin-left: 20px;
 }
 
-.club-content h2 {
+.event-content h2 {
     font-size: 1.5rem;
     color: #0056a3;
     margin-bottom: 10px;
 }
 
-.club-content p {
+.event-content p {
     font-size: 1rem;
     color: #333;
     margin-bottom: 15px;
 }
 
-.club-content .btn {
+.event-content .btn {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1rem;
@@ -108,11 +108,11 @@ header nav ul li a:hover {
     transition: background-color 0.2s;
 }
 
-.club-content .btn:hover {
+.event-content .btn:hover {
     background-color: #003d73;
 }
 /*slides*/
-.club .slider {
+.event .slider {
     position: relative;
     width: 400px; /* Largeur définie du conteneur */
     height: 400px; /* Hauteur définie du conteneur */
@@ -121,7 +121,7 @@ header nav ul li a:hover {
     margin-right: 20px; /* Assure l'espacement avec le contenu à droite */
     flex-shrink: 0; /* Garde la taille constante */
 }
-.club .slider img {
+.event .slider img {
     position: absolute;
     width: 100%; /* Les images remplissent le conteneur */
     height: 100%; /* S'ajustent à la hauteur du conteneur */
@@ -134,7 +134,7 @@ header nav ul li a:hover {
     align-items: flex-start;
 }
 
-.club .slider img.active {
+.event .slider img.active {
     opacity: 1;
 }
 

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Kodinger" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Page de Connexion</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="login.css" />
+  </head>
+  <body>
+  <header>
+    <div class="logo">
+      <img src="logo essect.png" alt="Logo ESSECT" />
+    </div>
+    <nav>
+      <ul>
+       <li><a href="index.html">Accueil</a></li>
+                <li><a href="etude2.html">Programmes</a></li>
+                <li><a href="events.html">Événements</a></li>
+                <li><a href="forum.html">Forums</a></li>
+                <li><a href="club.html">Clubs</a></li>
+                <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <div class="my-login-page">
+    <section class="h-100">
+      <div class="container h-100">
+        <div class="row justify-content-md-center h-100">
+          <div class="card-wrapper">
+            
+            <div class="card fat">
+              <div class="card-body">
+                <h4 class="card-title">Se connecter</h4>
+                <form method="POST" class="my-login-validation" novalidate="">
+                  <div class="form-group">
+                    <label for="login">Nom d'utilisateur</label>
+                    <input
+                      id="login"
+                      type="text"
+                      class="form-control"
+                      name="login"
+                      required
+                      placeholder="Nom d'utilisateur"
+                      autofocus
+                    />
+                    <div class="invalid-feedback">
+                      Le nom d'utilisateur est invalide
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input
+                      id="password"
+                      type="password"
+                      class="form-control"
+                      name="password"
+                      placeholder="Mot de passe"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Le mot de passe est requis
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <a href="forgot.html" class="float-right"
+                      >Mot de passe oublié ?</a
+                    >
+                    <div class="custom-checkbox custom-control">
+                      <input
+                        type="checkbox"
+                        name="remember"
+                        id="remember"
+                        class="custom-control-input"
+                      />
+                      <label for="remember" class="custom-control-label"
+                        >Se souvenir de moi</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form-group m-0">
+                    <button type="submit" class="btn btn-primary btn-block">
+                      Se connecter
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="footer">
+              Copyright &copy; 2024&mdash; ESSECT
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/my-login.js"></script>
+    <footer>
+        <div class="footer-container">
+            <!-- Section principale -->
+            <div class="footer-main">
+                <h3>ESSECT</h3>
+                <p>Faculté des Sciences Économiques et de Gestion de Tunis. Suivez-nous pour rester informé des événements, programmes et actualités.</p>
+                <p>Adresse : Montfleury, Tunis, Tunisie</p>
+                <p>Téléphone : +216 71 123 456 </p>
+            
+            </div>
+    
+            <!-- Section des liens rapides -->
+            <div class="footer-links">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programmes.html">Programmes</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="forums.html">Forums</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Section des réseaux sociaux -->
+            <div class="footer-social">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/essect" target="_blank">
+                        <img src="facebook-icon.jpg" alt="Facebook">
+                    </a>
+                    <a href="mailto:contact@essect.tn">
+                        <img src="email-icon.jpg" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/company/essect-montfleury/" target="_blank">
+                        <img src="linkedin-icon.bc4172bd-63f0-455a-9acd-5457f44e4473" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 ESSECT. Tous droits réservés. | <a href="mentions-legales.html">Mentions légales</a></p>
+        </div>
+    </footer>

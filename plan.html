@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans;
+      }
+
+      .course {
+        border: 1px solid darkgray;
+        text-align: center;
+        padding: 5px;
+        transition-property: background-color;
+        transition-duration: 1s;
+        cursor: pointer;
+      }
+
+      .course:hover {
+        opacity: 0.8;
+        /*text-shadow: 0px 0px 3px #FFF;*/
+      }
+
+      .header {
+        text-align: center;
+        border: 1px solid black;
+        background-color: #777;
+        color: white;
+        font-weight: bold;
+        text-shadow: 0px 1px 2px black;
+      }
+
+      .prev {
+        background-color: #ccbbff;
+      }
+
+      .direct {
+        background-color: lightBlue;
+      }
+
+      .selected {
+        background-color: #a0dda0;
+      }
+
+      .next {
+        background-color: #ffeeaa;
+      }
+
+      h2 {
+        text-align: center;
+        font-family: serif;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <script>
+      var selected = [];
+
+      var dependency = {
+        GEN100: [], 
+        GEN101: [], 
+        GEN102: [], 
+        GEN103: [], 
+        GEN104: [],
+        GEN105: [],
+        GEN106:[],
+        GEN107:[],
+        GEN108:[],
+        GEN109:[],
+        GEN111:[], 
+
+        //semester 2:
+
+        GEN112: ["GEN101"],//Algorithmique et structures de données 1
+        GEN113: [], 
+        GEN114: [], 
+        GEN115: [], 
+        GEN116: ["GEN104"],
+        GEN117: ["GEN107"], 
+        GEN118: ["GEN106"],
+        GEN119:["GEN100"],
+        GEN120:[],
+        GEN121:[],
+        GEN122:[], 
+
+        //semester 3:
+
+        GEN223: [], 
+        GEN224: [], 
+        GEN225: [], 
+        GEN226: ["GEN114"], //Introduction aux systèmes d'information
+        GEN227: ["GEN114"], 
+        GEN228: ["GEN115"], 
+        GEN229:["GEN120"],
+        GEN230:[],
+        GEN231:["GEN105"],
+        GEN223:[],
+        GEN260:[],
+        GEN231:[],
+
+
+        //semester 4:
+
+        GEN233: ["GEN227"], //Base de donnée
+        GEN234: ["GEN229"], 
+        GEN235: [], 
+        GEN236: [], 
+        GEN237: [], 
+        GEN238: [], 
+        GEN239: [], 
+        GEN240:[],
+        GEN241:[],
+        GEN242:["GEN119"],
+        GEN243:["GEN226"],
+        GEN244:["GEN230"],
+        GEN245:[],
+
+
+        //semester 5:
+
+        GEN247: ["GEN234"], //Programmation Web 2
+        GEN248: [], 
+        GEN249: ["GEN228"], 
+        GEN250: ["GEN242"], 
+        GEN251: [], 
+        GEN252: [], 
+        GEN253:[],
+        GEN254:[],
+        GEN255:[],
+        GEN256:[],
+        GEN257:[],
+        GEN258:["GEN232"],
+
+        
+      };
+
+      $(function () {
+        $(".course").click(function () {
+          $(".course").removeClass("prev");
+          $(".course").removeClass("direct");
+          $(".course").removeClass("selected");
+          $(".course").removeClass("next");
+
+          //    if($(this).hasClass("selected")){
+          //        $(this).removeClass("selected");
+          //    }
+          //    else
+          //    {
+
+          //}
+          markDependency(this.id, 0);
+          markNext(this.id);
+        });
+
+        function markDependency(start, level) {
+          switch (level) {
+            case 0:
+              $("#" + start).addClass("selected");
+              break;
+            case 1:
+              $("#" + start).addClass("direct");
+              break;
+            default:
+              $("#" + start).addClass("prev");
+              break;
+          }
+
+          for (var i = 0; i < dependency[start].length; i++) {
+            markDependency(dependency[start][i], level + 1);
+          }
+        }
+
+        function markNext(start) {
+          for (course in dependency) {
+            for (var dep = 0; dep < dependency[course].length; dep++) {
+              if (dependency[course][dep] == start) {
+                $("#" + course).addClass("next");
+              }
+            }
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h2>Business Computing</h2>
+    <table>
+
+      <tr>
+        <td class="header">Semester 1</td>
+        <td class="course" id="GEN100">Business Communication</td>
+        <td class="course" id="GEN101">
+          Algorithmique et structures de données 1
+        </td>
+        <td class="course" id="GEN102">Systèmes d'exploitation</td>
+        <td class="course" id="GEN103">
+          Systèmes logiques et architecture des ordinateurs
+        </td>
+        <td class="course" id="GEN104">Analyse</td>
+        <td class="course" id="GEN105">Statistiques et Probabilité</td>
+        <td class="course" id="GEN106">Principes de gestion</td>
+        <td class="course" id="GEN107">Comptabilité générale</td>
+        <td class="course" id="GEN108">Compétences Numériques</td>
+        <td class="course" id="GEN109">Développement personnel</td>
+        <td class="course" id="GEN110">Programmation événementielle</td>
+        <td class="course" id="GEN111">IHM</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="header">Semester 2</td>
+        <td class="course" id="GEN112">
+          Algorithmique, Structure de données 2
+        </td>
+        <td class="course" id="GEN113">Fondements des réseaux</td>
+        <td class="course" id="GEN114">
+          Introduction aux systèmes d'information
+        </td>
+        <td class="course" id="GEN115">Logique mathématique</td>
+        <td class="course" id="GEN116">Algèbre</td>
+        <td class="course" id="GEN117">Le système d'information comptable</td>
+        <td class="course" id="GEN118">Gestion Financière</td>
+        <td class="course" id="GEN119">Business Communication 2</td>
+        <td class="course" id="GEN120">Digital Challenge</td>
+        <td class="course" id="GEN121">
+          Stratégies de résolution de problèmes
+        </td>
+        <td class="course" id="GEN122">Certification PIX</td>
+      </tr>
+      <tr>
+        <td class="header">Semester 3</td>
+        
+        <td class="course" id="GEN223">Conception orientée objet</td>
+        <td class="course" id="GEN224">théorie des graphes</td>
+        <td class="course" id="CAS225">Digital marketing</td>
+        <td class="course" id="GEN226">Certification MTA</td>
+        <td class="course" id="GEN227">Base de donnée</td>
+        <td class="course" id="GEN228">Fondement de l'IA</td>
+        <td class="course" id="GEN229">Programmation web</td>
+        <td class="course" id="GEN230">Programmation OO</td>
+        <td class="course" id="GEN231">Statistique</td>
+        <td class="course" id="GEN232">Ethique et lois des IT</td>
+        <td class="course" id="GEN260">Projet professionnel
+            personnel (PPP)</td>
+        <td class="course" id="GEN261">Economie numérique</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="header">Semester 4</td>
+        <td class="course" id="GEN233">S.G.B.D / D.B.M.S</td>
+        <td class="course" id="GEN234">Programmation Web 2</td>
+        <td class="course" id="GEN235">Conception TB et Scoring /
+            Dashboard Design and
+            Scoring
+            </td>
+        <td class="course" id="GEN236">Recherche Opérationnelle /
+            Operations Research </td>
+        <td class="course" id="CAS237">IT Management </td>
+        <td class="course" id="GEN238">Génie logiciel et outils
+            d'AGL</td>
+        <td class="course" id="GEN239">Data Warehouse</td>
+        <td class="course" id="GEN240">E
+            -Customer relationship
+            management</td>
+        <td class="course" id="GEN241">Entreprenariat</td>
+        <td class="course" id="GEN242">Business Communication</td>
+        <td class="course" id="GEN243">Certification Oracle</td>
+        <td class="course" id="GEN244">Préparation à la certification
+            JAVA</td>
+        <td class="course" id="GEN245">Blockchain</td>
+        
+    </tr>
+    </tr>
+    </tr>
+    </tr>
+      </tr>
+      <tr>
+        <td class="header">Semester 5</td>
+        <td class="course" id="GEN247">Intégration WEB</td>
+        <td class="course" id="GEN248">Développement Mobile</td>
+        <td class="course" id="GEN249">Intelligence artificielle</td>
+        <td class="course" id="GEN250">Business Communication </td>
+        <td class="course" id="GEN251">Techniques de
+            Référencement web </td>
+        <td class="course" id="GEN252">Paiement électronique </td>
+        <td class="course" id="GEN253">Analyse de données et Data
+            Mining</td>
+        <td class="course" id="GEN254">IT Security Fondamentals</td>
+        <td class="course" id="GEN255">
+            Gestion de projets
+        </td>
+        <td class="course" id="GEN256">
+            Introduction au big data et
+Cloud  </td>
+            <td class="course" id="GEN257">
+                Langage de programmation
+                évolué BI  </td>
+                <td class="course" id="GEN258">
+                    Laws and Ethics of IT  </td>
+
+      </tr>
+    </table>
+    <br />
+    <table>
+      <tr>
+        <td class="selected" style="width: 30px"></td>
+        <td> Cours sélectionné</td>
+      </tr>
+      <tr>
+        <td class="direct" style="width: 30px"></td>
+        <td>Prérequis direct</td>
+      </tr>
+      <tr>
+        <td class="prev" style="width: 30px"></td>
+        <td>Prérequis indirect</td>
+      </tr>
+      <tr>
+        <td class="next" style="width: 30px"></td>
+        <td> Cours suivants</td>
+      </tr>
+    </table>
+  </body>
+</html>

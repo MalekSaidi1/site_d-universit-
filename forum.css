@@ -1,0 +1,120 @@
+/* Corps principal */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Conteneur principal */
+.forum-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Section des sujets */
+.topics {
+  width: 25%;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  padding: 10px;
+}
+.topics h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+#new-topic-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#new-topic-button:hover {
+  background-color: #0056b3;
+}
+.topic-item {
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+.topic-item:hover {
+  background-color: #e0e0e0;
+}
+
+/* Section centrale */
+/* Section centrale */
+.discussion {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.discussion h2 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+.discussion-content {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  min-height: 200px;
+  flex-grow: 1;
+  overflow-y: auto; /* Permet de faire défiler les messages */
+}
+/* Section du formulaire */
+/* Section du formulaire */
+.form-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+}
+/* Conteneur de saisie et bouton */
+.input-container {
+  position: relative;
+  width: 100%;
+}
+/* Zone de saisie */
+.form-section textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+  padding-right: 40px; /* Espace pour le bouton */
+}
+/* Bouton d'envoi */
+.submit-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Forme circulaire */
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit-btn:hover {
+  background-color: #0056b3;
+}

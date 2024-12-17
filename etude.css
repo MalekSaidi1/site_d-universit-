@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    width: 1000px; /* Largeur de la liste des liens */
+    margin: 20px auto; /* Centrer la page horizontalement */
+  }
+  
+  .link {
+    text-decoration: none;
+    color: red; /* Liens en rouge */
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+  }
+  
+  .separator {
+    border-bottom: 1px solid black; /* Traité fin noir */
+    margin: 0;
+    height: 100%; /* Traité qui occupe toute la hauteur de la page */
+  }
+  
+  a:last-child + .separator {
+    display: none; /* Aucun trait après le dernier lien */
+  }
+  .link:hover {
+    text-decoration: underline; /* Sousligne le lien au survol */
+  }
+  
