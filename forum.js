@@ -9,16 +9,16 @@ const newTopicButton = document.getElementById("new-topic-button");
 // Dictionnaire pour stocker l'historique des discussions par sujet
 const topicsData = {
   1: {
-    title: "Sujet 1",
-    messages: ["Bienvenue sur la discussion du Sujet 1."],
+    title: "Recherche de stages ",
+    messages: ["Bienvenue dans la discussion du Sujet."],
   },
   2: {
-    title: "Sujet 2",
-    messages: ["Bienvenue sur la discussion du Sujet 2."],
+    title: "Carte étudiant",
+    messages: ["Bienvenue dans la discussion du Sujet ."],
   },
   3: {
-    title: "Sujet 3",
-    messages: ["Bienvenue sur la discussion du Sujet 3."],
+    title: "Dépot PFE",
+    messages: ["Bienvenue dans la discussion du Sujet."],
   },
 };
 

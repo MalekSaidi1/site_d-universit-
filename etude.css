@@ -1,8 +1,56 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    display: flex; /* Active Flexbox */
+    align-items: center; /* Aligne verticalement les éléments */
+    justify-content: space-between; /* Espace entre le logo et la navigation */
+    padding: 10px 50px; /* Ajoute de l'espace autour */
+  }
+
+  header .logo img {
+    max-width: 130px;
+    height: auto;
+    margin-right: 20px; /* Ajoute un espace entre le logo et les liens */
+  }
+  header nav {
+    flex-grow: 1; /* Permet à la navigation de prendre tout l'espace nécessaire */
+  }
+
+  header nav ul {
+    list-style: none;
+    display: flex; /* Alignement horizontal des éléments */
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Centre les éléments horizontalement */
+  }
+
+  header nav ul li {
+    margin: 0 15px; /* Espace entre les éléments */
+  }
+
+  header nav ul li a {
+    color: rgba(0, 0, 255, 0.767);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+
+  header nav ul li a:hover {
+    color: #007bff;
+  }
+
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    padding-top: 30px;
   }
   
   .container {
@@ -12,14 +60,14 @@ body {
   
   .link {
     text-decoration: none;
-    color: red; /* Liens en rouge */
+    color: black; /* Liens en rouge */
     font-size: 18px;
     padding: 10px 0;
     display: block;
   }
   
   .separator {
-    border-bottom: 1px solid black; /* Traité fin noir */
+    border-bottom: 1px solid red; /* Traité fin noir */
     margin: 0;
     height: 100%; /* Traité qui occupe toute la hauteur de la page */
   }
@@ -30,4 +78,99 @@ body {
   .link:hover {
     text-decoration: underline; /* Sousligne le lien au survol */
   }
-  
+  footer {
+    background-color:  #024b8b;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+}
+
+/* Conteneur principal */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section principale */
+.footer-main h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #00b4d8;
+}
+
+.footer-main p {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Liens rapides */
+.footer-links h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #00b4d8;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #00b4d8;
+}
+
+/* Réseaux sociaux */
+.footer-social h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #00b4d8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+/* Bas de page */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom a {
+    color: #00b4d8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
